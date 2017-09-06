@@ -5,17 +5,20 @@
 #include <string.h>
 #include <vector>
 
-class PgmReader
+class PGM3DReader
 {
 private:
-	int m_xMax;
-	int m_yMax;
-	int m_zMax;
-	int m_grayscalesMax;
+	int m_width;
+	int m_height;
+	int m_depth;
+	int m_grayscales;
 	std::vector<int> m_data;
 public:
-	PgmReader(std::string filename);
-	~PgmReader();
+	PGM3DReader();
+	~PGM3DReader();
+
+	/* Use references to avoid copy */
+	bool readPGM3D(const std::string &filename);
 };
 
 #endif

@@ -1,21 +1,21 @@
-#ifndef __PGM3D_READER_H__
-#define __PGM3D_READER_H__
+#ifndef __IMAGE3D_HPP__
+#define __IMAGE3D_HPP__
 
 #include <iostream>
 #include <string.h>
 #include <vector>
+#include <cstdint>
 
-class PGM3DReader
-{
+class Image3D {
 private:
 	int m_width;
 	int m_height;
 	int m_depth;
-	int m_grayscales;
-	std::vector<int> m_data;
+	uint8_t m_grayscales;
+	std::vector<uint8_t> m_data;
 public:
-	PGM3DReader();
-	~PGM3DReader();
+	Image3D();
+	~Image3D();
 
 	/* Use references to avoid copy */
 	bool readPGM3D(const std::string &filename);

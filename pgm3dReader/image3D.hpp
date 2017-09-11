@@ -8,17 +8,19 @@
 
 class Image3D {
 private:
-	int m_width;
-	int m_height;
-	int m_depth;
-	uint8_t m_grayscales;
-	std::vector<uint8_t> m_data;
+  int m_width;
+  int m_height;
+  int m_depth;
+  uint8_t m_grayscales;
+  std::vector<uint8_t> m_data;
 public:
-	Image3D();
-	~Image3D();
+  Image3D();
+  ~Image3D();
 
-	/* Use references to avoid copy */
-	bool readPGM3D(const std::string &filename);
+  /* Use references to avoid copy */
+  void displayInfo();
+  void displayData();
+  bool readPGM3D(const std::string &filename);
 };
 
-#endif
+#endif // __IMAGE3D_HPP__

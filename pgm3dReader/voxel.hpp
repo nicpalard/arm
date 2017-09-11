@@ -3,12 +3,12 @@
 
 class Voxel {
 private:
-	int x;
-	int y;
-	int z;
-	uint8_t data;
+  int m_x;
+  int m_y;
+  int m_z;
+  uint8_t m_data;
 public:
 
 }
 
-#endif
+#endif // __VOXEL_HPP__

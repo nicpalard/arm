@@ -10,18 +10,18 @@
 class Voxel {
 
 private:
-  int m_x;
-  int m_y;
-  int m_z;
-  uint8_t m_data;
+	int m_x;
+	int m_y;
+	int m_z;
+	uint8_t m_data;
 
 public:
-  Voxel(int x, int y, int z, uint8_t data = 0);
-  ~Voxel();
-  
-  Mesh makeMesh();
+	Voxel(int x, int y, int z, uint8_t data = 0);
+	~Voxel();
 
-  friend std::ostream & operator <<(std::ostream &os, const Voxel &voxel);
+	Mesh makeMesh();
+
+	friend std::ostream & operator <<(std::ostream &os, const Voxel &voxel);
 };
 
 #endif // __VOXEL_HPP__

@@ -12,14 +12,17 @@ private:
   int m_depth;
   uint8_t m_grayscales;
   std::vector<Voxel> m_data;
+  
 public:
   Image3D();
   ~Image3D();
 
   void displayInfo();
   void displayData();
+  
   /* Use references to avoid copy */
   bool readPGM3D(const std::string &filename);
+  
 
   static const int HEADER_SIZE = 5;
 };

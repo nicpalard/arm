@@ -3,6 +3,9 @@
 
 #include <iostream>
 #include <cstdint>
+#include <vector>
+#include "vertex.hpp"
+#include "mesh.hpp"
 
 class Voxel {
 
@@ -13,11 +16,12 @@ private:
   uint8_t m_data;
 
 public:
-	Voxel(int x, int y, int z, uint8_t data = 0);
-	~Voxel();
+  Voxel(int x, int y, int z, uint8_t data = 0);
+  ~Voxel();
+  
+  Mesh makeMesh();
 
-	friend std::ostream & operator <<(std::ostream &os, const Voxel &voxel);
-
+  friend std::ostream & operator <<(std::ostream &os, const Voxel &voxel);
 };
 
 #endif // __VOXEL_HPP__

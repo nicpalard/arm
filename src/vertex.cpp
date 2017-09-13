@@ -11,7 +11,9 @@ Vertex::~Vertex() {}
 
 std::ostream & operator << (std::ostream &os, const Vertex &vertex)
 {
-  os << "[" << vertex.m_x << ", "
+  os << "["
+     << vertex.m_x << ", "
      << vertex.m_y << ", "
-     << vertex.m_z << "]" << std::endl;
+     << vertex.m_z
+     << "]" << std::endl;
 }

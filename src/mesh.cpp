@@ -8,10 +8,12 @@ void Mesh::addVertex(Vertex vertex)
   m_vertex.push_back(vertex);
 }
 
+
 void Mesh::addFace(std::vector<int> vertex)
 {
   m_face.push_back(vertex);
 }
+
 
 void Mesh::display()
 {

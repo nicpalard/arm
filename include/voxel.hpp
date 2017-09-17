@@ -19,7 +19,7 @@ public:
 	Voxel(int x, int y, int z, uint8_t data = 0);
 	~Voxel();
 
-	Mesh makeMesh();
+	Mesh buildMesh();
 
 	friend std::ostream & operator <<(std::ostream &os, const Voxel &voxel);
 };

@@ -31,3 +31,7 @@ void Mesh::display()
 		std::cerr << "]" << std::endl;
 	}
 }
+
+void Mesh::buildFace(Vertex tl, Vertex tr, Vertex bl, Vertex br, int grayscale) {
+	m_faces.push_back(Face(tl, tr, bl, br, grayscale));
+}

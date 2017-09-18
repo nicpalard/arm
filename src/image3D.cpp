@@ -98,10 +98,6 @@ bool Image3D::readPGM3D(const std::string &filename)
 			}
 		}
 	}
-
-	/* Debug line */
-	displayInfo();
-	displayData();
-
+	
 	return (m_width * m_height * m_depth == m_data.size());
 }

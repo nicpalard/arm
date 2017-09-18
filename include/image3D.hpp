@@ -22,7 +22,8 @@ public:
 
 	/* Use references to avoid copy */
 	bool readPGM3D(const std::string &filename);
-
+	// TODO: create build function that creates a Mesh using VEF system (Vertex Edge Face)
+	// Mesh build();
 
 	static const int HEADER_SIZE = 5;
 };

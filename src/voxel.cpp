@@ -12,6 +12,7 @@ Voxel::Voxel(int x, int y, int z, uint8_t data)
 
 Voxel::~Voxel() {}
 
+//TODO : Remove this function and do this in Image3D.build()
 Mesh Voxel::buildMesh()
 {
 	Mesh mesh;

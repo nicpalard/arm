@@ -8,13 +8,7 @@ void Mesh::addVertex(Vertex vertex)
 	m_vertex.push_back(vertex);
 }
 
-
-void Mesh::addFace(std::vector<int> vertex)
-{
-	m_face.push_back(vertex);
-}
-
-
+// TODO : Change this and overload the << operator.
 void Mesh::display()
 {
 	std::cerr << "[Mesh]" << std::endl;
@@ -22,6 +16,7 @@ void Mesh::display()
 		std::cerr << " Vertex " << i << " : " << m_vertex[i];
 	}
 
+/*
 	for (int i = 0; i < m_face.size(); i++) {
 		std::cerr << " Face " << i << " : [";
 		for (int j = 0; j < m_face[i].size(); j++) {
@@ -30,6 +25,7 @@ void Mesh::display()
 		}
 		std::cerr << "]" << std::endl;
 	}
+*/
 }
 
 void Mesh::buildFace(Vertex tl, Vertex tr, Vertex bl, Vertex br, int grayscale) {
